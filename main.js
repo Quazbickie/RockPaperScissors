@@ -1,3 +1,6 @@
+let playerWins = 0;
+let computerWins = 0;
+
 function getComputerChoice() {
     let randomInt = Math.floor(Math.random() * 3);
     switch(randomInt){
@@ -31,8 +34,34 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+function whoWonInt(gameMessage){
+        if(gameMessage.includes("You Win")){
+            return 0;
+        } else if(gameMessage.includes("You Lose")){
+            return 1;
+        } else {
+            return -1;
+        }
+}
+
+function game(){
+    for(let i = 0; i < 5; i++){
+
+        let gameResultString = playRound(prompt("Please enter Rock, Paper or Scissors"), getComputerChoice());
+        console.log(gameResultString);
+
+        if(whoWonInt(gameResultString) == 0){
+            playerWins++;
+        } else if(whoWonInt(gameResultString) == 1){
+            computerWins++;
+        }
+
+        console.log("The Score is Now: \nPlayer: " + playerWins + "\nComputer: " + computerWins);
+
+    }
+}
 
 
 
 
-console.log(playRound("ROCK", getComputerChoice()));
+game();
