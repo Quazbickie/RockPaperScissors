@@ -55,13 +55,10 @@ function game(){
         } else if(whoWonInt(gameResultString) == 1){
             computerWins++;
         }
-
         console.log("The Score is Now: \nPlayer: " + playerWins + "\nComputer: " + computerWins);
 
     }
 }
-
-
 
 
 game();
