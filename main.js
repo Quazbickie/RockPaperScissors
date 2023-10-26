@@ -1,5 +1,7 @@
 let playerWins = 0;
 let computerWins = 0;
+let buttons = document.querySelector('.buttons');
+console.log(buttons);
 
 function getComputerChoice() {
     let randomInt = Math.floor(Math.random() * 3);
@@ -44,10 +46,9 @@ function whoWonInt(gameMessage){
         }
 }
 
-function game(){
-    for(let i = 0; i < 5; i++){
+function game(playerChoice){
 
-        let gameResultString = playRound(prompt("Please enter Rock, Paper or Scissors"), getComputerChoice());
+        let gameResultString = playRound(playerChoice, getComputerChoice());
         console.log(gameResultString);
 
         if(whoWonInt(gameResultString) == 0){
@@ -56,9 +57,46 @@ function game(){
             computerWins++;
         }
         console.log("The Score is Now: \nPlayer: " + playerWins + "\nComputer: " + computerWins);
-
-    }
+        
+        updateUI();
+    
 }
 
 
-game();
+buttons.addEventListener('click', (event) => {
+    let target = event.target;
+    console.log(target);
+
+    switch(target.id) {
+        case 'rock-button':
+            console.log("You pressed ROCK");
+            game('rock');
+            break;
+        case 'paper-button':
+            console.log("You pressed PAPER");
+            game('paper');
+            break;
+        case 'scissors-button':
+            console.log("You pressed SCISSORS");
+            game('scissors');
+            break;
+    }
+
+
+});
+
+
+function updateUI(){
+
+    console.log("UI FUNCTION");
+
+    let playerScore = document.querySelector('#p1-score');
+    let cpuScore = document.querySelector('#cpu-score');
+
+    console.log(playerScore);
+
+    playerScore.textContent = playerWins;
+    cpuScore.textContent = computerWins;
+
+
+}
