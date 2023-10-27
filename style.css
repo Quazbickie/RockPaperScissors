@@ -1,0 +1,144 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #003049;
+}
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-text {
+    font-size: xx-large;
+    color: #CCCCCC;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #D62828;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    transition: transform 0.5s;
+
+}
+
+.rock-img {
+    filter: drop-shadow(-10px 10px 2px black);
+
+}
+
+.paper-img {
+    filter: drop-shadow(0.5px 12px 2px black);
+}
+
+.scissors-img {
+    filter: drop-shadow(10px 10px 2px black);
+}
+
+.buttons {
+    display: flex;
+    gap: 150px;
+}
+
+
+.scissors-img:hover,
+.paper-img:hover,
+.rock-img:hover {
+    transform: translateY(-10px);
+
+}
+
+
+
+#results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    background-color: #F77F00;
+    flex-grow: 2;
+
+}
+
+.choices {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 350px;    
+}
+
+.player-choice, .cpu-choice {
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #003049;
+    border-radius: 12px;
+    background-color: #E36565;
+    color: #FFFFFF
+}
+
+.player-choice-img, .cpu-choice-img {
+    height: 40px;
+    width: 40px;
+    filter: drop-shadow(0.5px 5px 2px black);
+
+}
+
+
+.result {
+    flex-basis: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:#F74000;
+    border: 8px solid #783F00;
+    border-radius: 12px;;
+    background-color: #FFD1A0;
+}
+
+.result-main {
+    font-size: 30px;
+}
+
+.result-flavour {
+    font-size: 20px;
+}
+
+.scoreboard {
+    flex-basis: 150px;
+    height: 150px;
+    border: 5px solid #783F00;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #F74000;
+    background-color: #FFD1A0;
+}
+
+#cpu-score, #p1-score {
+    margin-block-end: 0px;
+    margin-block-start: 40px;
+    font-size: 74px;
+}

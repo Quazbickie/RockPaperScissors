@@ -5,35 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container" id="header">
-        <h1 class="title-text" id="title">ROCK, PAPER, SCISSORS</h1>
-    </div>
-    <div class="container" id="main">
-        <div class="buttons">
-            <div class="button">
-                <img src="./assets/rock.svg" alt="" class="rock-img" id="rock-button">
+    <div class="page-container">
+        <div class="container" id="header">
+            <h1 class="title-text" id="title">ROCK, PAPER, SCISSORS</h1>
+        </div>
+        <div class="container" id="main">
+            <div class="buttons">
+                <div class="button">
+                    <img src="./assets/rock.svg" alt="" class="rock-img" id="rock-button">
+                </div>
+                <div class="button">
+                    <img src="./assets/paper.svg" alt="" class="paper-img" id="paper-button">
+                </div>
+                <div class="button">
+                    <img src="./assets/scissors.svg" alt="" class="scissors-img" id="scissors-button">
+                </div>
             </div>
-            <div class="button">
-                <img src="./assets/paper.svg" alt="" class="paper-img" id="paper-button">
+            <div class="choices">
+                <div class="player-choice">
+                    <p class="player-choice-text">You Chose: </p>
+                    <img src="./assets/question_mark1.svg" alt="" class="player-choice-img">
+                </div>
+                <div class="cpu-choice">
+                    <p class="cpu-choice-text">CPU Chose: </p>
+                    <img src="./assets/question_mark1.svg" alt="" class="cpu-choice-img">
+                </div>
             </div>
-            <div class="button">
-                <img src="./assets/scissors.svg" alt="" class="scissors-img" id="scissors-button">
+        </div>
+        <div class="container" id="results">
+            <div class="scoreboard" id="player-scoreboard">
+                <p id="p1-score">0</p>
+                <p class="scoreboard-title">P1 Score</p>
+            </div>
+            <div class="result" id="result">
+                <p class="result-main"></p>
+                <p class="result-flavour"></p>
+            </div>
+            <div class="scoreboard" id="cpu-scoreboard">
+                <p id="cpu-score">0</p>
+                <p class="scoreboard-title">CPU Score</p>
             </div>
         </div>
     </div>
-    <div class="container" id="results">
-        <div class="player-scoreboard">
-            <p id="p1-score">0</p>
-        </div>
-        <div class="result" id="result">
-
-        </div>
-        <div class="cpu-scoreboard">
-            <p id="cpu-score">0</p>
-        </div>
-    </div>
+    
 </body>
 <script src="./main.js"></script>
 </html>
